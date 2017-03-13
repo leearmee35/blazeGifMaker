@@ -1,0 +1,83 @@
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="fonting">Ian's GifMaker</h1>
+    </header>
+    {{> wrapper}}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+</body>
+
+<template name="paint">
+    <div class="gallery">
+        <img src={{url}} alt="" width="300" height="200">
+    </div>
+</template>
+
+
+
+<template name="wrapper">
+    <div>
+        <div class="row">
+            <div class="col s9 main">
+                <div class="row">
+                <p class="heading mleft">Picture add zone</p>
+                {{#each paints}}
+                    {{> paint}}
+                {{/each}}
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <p class="heading">Generated GIF</p>
+                        <div id="gif">
+                            <img id="gifimg" src="" height="auto">
+                        </div>
+                    </div>
+                    <div class="col s6 forcenter">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col s3 control">
+                <p></p>
+                <div>
+                    <div id="dropDiv" class="dropbox" ondrop="" ondragover=""><span>Drag and <em>Drop</em> here</span></div>
+                </div>
+                <br>
+                <div class="file-field input-field forcenter">
+                    <div class="btn">
+                        <span>Add Files</span>
+                        <input type="file" id="addfile" multiple>
+                    </div>
+                </div>
+                <br>
+                Interval Time: {{para}}
+                <p class="range-field">
+                    <input type="range" id="para" min="1" max="1000" />
+                </p>
+                <br>
+                <div class="forcenter">
+                    <button id="makegif" class="btn waves-effect waves-light" type="submit" name="action">Make GIF
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <br>
+                <div class="forcenter">
+                    <button id="dbtn" class="btn waves-effect waves-light" type="submit" name="action">Download
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</template>

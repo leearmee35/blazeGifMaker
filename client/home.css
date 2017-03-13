@@ -1,0 +1,54 @@
+.dropbox{
+    display: flex;
+    border: 2px dashed black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(255, 17, 0, 0.13);
+}
+.fonting{
+    font-size: 30pt;
+}
+
+.heading{
+    font-size: 18pt;
+}
+
+.mleft{
+    margin-left: 10px;
+}
+.instruction{
+    background-color: antiquewhite;
+}
+
+.main{
+    background-color: aliceblue;
+}
+
+.control{
+    background-color: rgba(41, 178, 255, 0.19);
+    padding-bottom: 15px !important;
+}
+
+.forcenter{
+    display: flex;
+    justify-content: center;
+}
+
+div.gallery {
+    margin: 5px;
+    float: left;
+    width: 180px;
+    height: 135px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 100%;
+}
